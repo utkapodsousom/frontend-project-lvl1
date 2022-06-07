@@ -1,5 +1,5 @@
-import checkIfEven from '../src/even.js';
 import { greetUser } from '../src/cli.js';
+import calculate from '../src/calc.js';
 
 const userName = greetUser();
-checkIfEven(userName);
+calculate(userName);
