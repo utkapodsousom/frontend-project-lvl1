@@ -7,4 +7,18 @@ export const greetUser = () => {
   return userName;
 };
 
+export const gcd = (a, b) => {
+  if (b > a) {
+    let temp = a; 
+    a = b; 
+    b = temp;
+  }
+  while (true) {
+      if (b == 0) return a;
+      a %= b;
+      if (a == 0) return b;
+      b %= a;
+  }
+}
+
 export const getRandomNumber = (max) => Math.round(Math.random() * max);
