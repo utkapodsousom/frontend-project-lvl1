@@ -25,7 +25,7 @@ export default (userName) => {
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
   while (winCount > 0) {
-    const candidate = getRandomNumber(1,100);
+    const candidate = getRandomNumber(1, 100);
     const isNumberPrime = isPrime(candidate);
     const answers = ['no', 'yes'];
     const correctAnswer = isNumberPrime ? answers[1] : answers[0];

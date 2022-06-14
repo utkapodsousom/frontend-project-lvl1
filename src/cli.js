@@ -1,7 +1,7 @@
 /* eslint-disable no-constant-condition */
 import readlineSync from 'readline-sync';
 
-export default greetUser = () => {
+export default () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?\n') || 'user';
   console.log(`Hello, ${userName.trim()}!`);
