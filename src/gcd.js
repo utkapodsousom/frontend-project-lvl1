@@ -1,14 +1,14 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber, gcd } from "./cli.js";
+import { getRandomNumber, gcd } from './cli.js';
 
 export default (userName) => {
   let winCount = 3;
   console.log('Find the greatest common divisor of given numbers.');
 
   while (winCount > 0) {
-    const numFirst = getRandomNumber(50);
-    const numSecond = getRandomNumber(50);
-    let correctAnswer = gcd(numFirst, numSecond);
+    const numFirst = getRandomNumber(1, 50);
+    const numSecond = getRandomNumber(1, 50);
+    const correctAnswer = gcd(numFirst, numSecond);
 
     const userAnswer = readlineSync.question(`Question: ${numFirst} ${numSecond}\n`);
     console.log(`Your answer: ${userAnswer}`);
@@ -23,4 +23,4 @@ export default (userName) => {
   }
 
   console.log(`Congratulations, ${userName}!`);
-}
+};

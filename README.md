@@ -14,3 +14,7 @@
 ## Game "Greatest Common Divisor"
 
 [![asciicast](https://asciinema.org/a/1pfMtRanN5kY5S6ZcixvK3gUJ.svg)](https://asciinema.org/a/1pfMtRanN5kY5S6ZcixvK3gUJ)
+
+## Game "Prime on Not"
+
+[![asciicast](https://asciinema.org/a/h4xyGh4lcHmkm0iOrZLql3GOk.svg)](https://asciinema.org/a/h4xyGh4lcHmkm0iOrZLql3GOk)

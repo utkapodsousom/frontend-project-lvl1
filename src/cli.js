@@ -1,6 +1,7 @@
+/* eslint-disable no-constant-condition */
 import readlineSync from 'readline-sync';
 
-export const greetUser = () => {
+export default greetUser = () => {
   console.log('Welcome to the Brain Games!');
   const userName = readlineSync.question('May I have your name?\n') || 'user';
   console.log(`Hello, ${userName.trim()}!`);
@@ -8,17 +9,19 @@ export const greetUser = () => {
 };
 
 export const gcd = (a, b) => {
-  if (b > a) {
-    let temp = a; 
-    a = b; 
-    b = temp;
+  let paramA = a;
+  let paramB = b;
+  if (paramB > paramA) {
+    const tempA = paramA;
+    paramA = paramB;
+    paramB = tempA;
   }
   while (true) {
-      if (b == 0) return a;
-      a %= b;
-      if (a == 0) return b;
-      b %= a;
+    if (paramB === 0) return paramA;
+    paramA %= paramB;
+    if (paramA === 0) return paramB;
+    paramB %= paramA;
   }
-}
+};
 
-export const getRandomNumber = (max) => Math.round(Math.random() * max);
+export const getRandomNumber = (min, max) => Math.floor(min + Math.random() * (max - min + 1));

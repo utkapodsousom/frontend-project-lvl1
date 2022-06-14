@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 import greetUser from '../src/cli.js';
-import gcd from '../src/gcd.js';
+import prime from '../src/prime.js';
 
 const userName = greetUser();
-gcd(userName);
+prime(userName);
