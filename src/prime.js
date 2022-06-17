@@ -1,43 +1,36 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber } from './cli.js';
+import getRandomNumber from './common.js';
 
 const isPrime = (number) => {
   if (number < 2) {
     return false;
   }
 
-  let divider = 2;
-
-  while (divider <= number / 2) {
-    if (number % divider === 0) {
+  for (let i = 2; i <= number / 2; i += 1) {
+    if (number % i === 0) {
       return false;
     }
-
-    divider += 1;
   }
 
   return true;
 };
 
 export default (userName) => {
-  let winCount = 3;
+  let winCount = 0;
 
   console.log('Answer "yes" if given number is prime. Otherwise answer "no".');
 
-  while (winCount > 0) {
-    const candidate = getRandomNumber(1, 100);
-    const isNumberPrime = isPrime(candidate);
+  while (winCount < 3) {
+    const givenNumber = getRandomNumber(1, 100);
+    const isNumberPrime = isPrime(givenNumber);
     const answers = ['no', 'yes'];
     const correctAnswer = isNumberPrime ? answers[1] : answers[0];
-    const userAnswer = readlineSync.question(`Question: ${candidate}\n`);
+    const userAnswer = readlineSync.question(`Question: ${givenNumber}\n`);
     console.log(`Your answer: ${userAnswer}`);
 
-    if (isNumberPrime && userAnswer === answers[1]) {
+    if (correctAnswer === userAnswer) {
       console.log('Correct!');
-      winCount -= 1;
-    } else if (!isNumberPrime && userAnswer === answers[0]) {
-      console.log('Correct!');
-      winCount -= 1;
+      winCount += 1;
     } else {
       console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
       return;

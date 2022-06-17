@@ -1,12 +1,12 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber } from './cli.js';
+import getRandomNumber from './common.js';
 
 export default (userName) => {
-  let winCount = 3;
+  let winCount = 0;
 
   console.log('What is the result of the expression?');
 
-  while (winCount > 0) {
+  while (winCount < 3) {
     const numFirst = getRandomNumber(1, 20);
     const numSecond = getRandomNumber(1, 20);
     const randomOperation = getRandomNumber(0, 2);
@@ -37,7 +37,7 @@ export default (userName) => {
     }
 
     console.log('Correct!');
-    winCount -= 1;
+    winCount += 1;
   }
 
   console.log(`Congratulations, ${userName}!`);

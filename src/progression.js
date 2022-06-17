@@ -1,5 +1,5 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber } from './cli.js';
+import getRandomNumber from './common.js';
 
 const generateProgression = (start, length, step) => {
   const numbers = [start];
@@ -13,18 +13,18 @@ const generateProgression = (start, length, step) => {
 
 const generateStringFromArray = (arr) => {
   let result = '';
-  /* eslint-disable-next-line */
-  for (const item of arr) {
+  arr.forEach((item) => {
     result += `${item} `;
-  }
+  });
   return result;
 };
 
 export default (userName) => {
-  let winCount = 3;
+  let winCount = 0;
+
   console.log('What number is missing in the progression?');
 
-  while (winCount > 0) {
+  while (winCount < 3) {
     const newProgression = generateProgression(
       getRandomNumber(0, 20),
       getRandomNumber(8, 12),
@@ -44,7 +44,7 @@ export default (userName) => {
     }
 
     console.log('Correct!');
-    winCount -= 1;
+    winCount += 1;
   }
 
   console.log(`Congratulations, ${userName}!`);

@@ -2,16 +2,20 @@
 # Brain Games
 
 [![Node CI](https://github.com/hexlet-boilerplates/nodejs-package/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-boilerplates/nodejs-package/actions)
-[![Maintainability](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/maintainability)](https://codeclimate.com/github/codeclimate/codeclimate/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/a99a88d28ad37a79dbf6/test_coverage)](https://codeclimate.com/github/hexlet-boilerplates/nodejs-package/test_coverage)
+[![hexlet-check](https://github.com/utkapodsousom/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg?branch=vBuild250403)](https://github.com/utkapodsousom/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ce8ad6313e8cd7668f69/maintainability)](https://codeclimate.com/github/utkapodsousom/frontend-project-lvl1/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ce8ad6313e8cd7668f69/test_coverage)](https://codeclimate.com/github/utkapodsousom/frontend-project-lvl1/test_coverage)
 
 ## Setup
+
+Required **Node v17** or newer
 
 ```sh
 make install
 ```
 
 ## Game "Even or Odd"
+## Package installation and gameplay
 
 [![asciicast](https://asciinema.org/a/VHLXY0gLeqYG27xpyZ6LKL1C7.svg)](https://asciinema.org/a/VHLXY0gLeqYG27xpyZ6LKL1C7)
 

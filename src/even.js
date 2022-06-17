@@ -1,11 +1,11 @@
 import readlineSync from 'readline-sync';
-import { getRandomNumber } from './cli.js';
+import getRandomNumber from './common.js';
 
 const checkIfEven = (userName) => {
-  let winCount = 3;
+  let winCount = 0;
   console.log('Answer "yes" if the number is even, otherwise answer "no".');
 
-  while (winCount > 0) {
+  while (winCount < 3) {
     const randomNum = getRandomNumber(1, 50);
     const isEven = randomNum % 2 === 0;
     const userInput = readlineSync.question(`Question: ${randomNum}\n`);
@@ -16,10 +16,10 @@ const checkIfEven = (userName) => {
 
     if (isEven && userInput === answers[1]) {
       console.log('Correct!');
-      winCount -= 1;
+      winCount += 1;
     } else if (!isEven && userInput === answers[0]) {
       console.log('Correct!');
-      winCount -= 1;
+      winCount += 1;
     } else {
       console.log(`'${userInput}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
       return;
