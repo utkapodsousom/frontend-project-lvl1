@@ -1,6 +1,24 @@
 import readlineSync from 'readline-sync';
 import getRandomNumber from './common.js';
 
+const performRandomOperation = (oper, numA, numB) => {
+  let correctAnswer = 0;
+  switch (oper) {
+    case '+':
+      correctAnswer = numA + numB;
+      break;
+    case '-':
+      correctAnswer = numA - numB;
+      break;
+    case '*':
+      correctAnswer = numA * numB;
+      break;
+    default:
+      throw new Error(`Invalid operation: ${oper}`);
+  }
+  return correctAnswer;
+};
+
 export default (userName) => {
   let winCount = 0;
 
@@ -12,21 +30,11 @@ export default (userName) => {
     const randomOperation = getRandomNumber(0, 2);
     const operation = '+-*'[randomOperation];
     const expression = `${numFirst} ${operation} ${numSecond}`;
-    let correctAnswer = 0;
-
-    switch (operation) {
-      case '+':
-        correctAnswer = numFirst + numSecond;
-        break;
-      case '-':
-        correctAnswer = numFirst - numSecond;
-        break;
-      case '*':
-        correctAnswer = numFirst * numSecond;
-        break;
-      default:
-        break;
-    }
+    const correctAnswer = performRandomOperation(
+      operation,
+      numFirst,
+      numSecond,
+    );
 
     const userAnswer = readlineSync.question(`Question: ${expression}\n`);
     console.log(`Your answer: ${userAnswer}`);
