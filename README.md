@@ -4,11 +4,12 @@
 [![Node CI](https://github.com/hexlet-boilerplates/nodejs-package/workflows/Node%20CI/badge.svg)](https://github.com/hexlet-boilerplates/nodejs-package/actions)
 [![hexlet-check](https://github.com/utkapodsousom/frontend-project-lvl1/actions/workflows/hexlet-check.yml/badge.svg?branch=vBuild250403)](https://github.com/utkapodsousom/frontend-project-lvl1/actions/workflows/hexlet-check.yml)
 [![Maintainability](https://api.codeclimate.com/v1/badges/ce8ad6313e8cd7668f69/maintainability)](https://codeclimate.com/github/utkapodsousom/frontend-project-lvl1/maintainability)
-[![Test Coverage](https://api.codeclimate.com/v1/badges/ce8ad6313e8cd7668f69/test_coverage)](https://codeclimate.com/github/utkapodsousom/frontend-project-lvl1/test_coverage)
+
+### This project's aim is to learn and improve coding skills of the developer and answer the queston how good the user is with numbers.
 
 ## Setup
 
-Required **Node v17** or newer
+Required **Node v13** or newer
 
 ```sh
 make install
