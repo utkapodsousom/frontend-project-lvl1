@@ -1,4 +1,3 @@
-/* eslint-disable no-constant-condition */
 import readlineSync from 'readline-sync';
 
 export default () => {
