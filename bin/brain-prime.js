@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import greetUser from '../src/cli.js';
-import prime from '../src/prime.js';
+import prime from '../src/games/prime.js';
 
-const userName = greetUser();
-prime(userName);
+prime();

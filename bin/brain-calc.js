@@ -1,6 +1,4 @@
 #!/usr/bin/env node
-import greetUser from '../src/cli.js';
-import calculate from '../src/calc.js';
+import calculate from '../src/games/calc.js';
 
-const userName = greetUser();
-calculate(userName);
+calculate();
