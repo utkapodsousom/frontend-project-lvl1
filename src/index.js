@@ -1,26 +1,21 @@
 import readlineSync from 'readline-sync';
 import greetUser from './cli.js';
 
-export default (msg, data) => {
+export default (gameDescription, gameData) => {
   const userName = greetUser();
-  let winCount = 0;
   const highestScore = 3;
-  console.log(msg);
+  console.log(gameDescription);
 
-  while (winCount < highestScore) {
-    const gameData = data();
-    const question = gameData[0];
-    const correctAnswer = gameData[1];
+  for (let winCount = 0; winCount < highestScore; winCount += 1) {
+    const gameDataColl = gameData();
+    const [question, correctAnswer] = gameDataColl;
     const userInput = readlineSync.question(`Question: ${question}\n`);
     console.log(`Your answer: ${userInput}`);
-
     if (userInput !== correctAnswer) {
       console.log(`'${userInput}' is wrong answer ;(. Correct answer was '${correctAnswer}'.\nLet's try again, ${userName}!`);
       return;
     }
-
     console.log('Correct!');
-    winCount += 1;
   }
 
   console.log(`Congratulations, ${userName}!`);

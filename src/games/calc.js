@@ -2,21 +2,16 @@ import getRandomNumber from '../common.js';
 import gameEngine from '../index.js';
 
 const performRandomOperation = (oper, numA, numB) => {
-  let result = 0;
   switch (oper) {
     case '+':
-      result = numA + numB;
-      break;
+      return numA + numB;
     case '-':
-      result = numA - numB;
-      break;
+      return numA - numB;
     case '*':
-      result = numA * numB;
-      break;
+      return numA * numB;
     default:
       throw new Error(`Invalid operation: ${oper}`);
   }
-  return result;
 };
 
 export default () => {
