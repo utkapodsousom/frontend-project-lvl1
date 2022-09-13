@@ -1,7 +1,7 @@
 import getRandomNumber from '../common.js';
 import gameEngine from '../index.js';
 
-const performRandomOperation = (numA, numB, oper) => {
+const performOperation = (numA, numB, oper) => {
   switch (oper) {
     case '+':
       return numA + numB;
@@ -23,7 +23,7 @@ export default () => {
     const randomOperation = getRandomNumber(0, 2);
     const operation = '+-*'[randomOperation];
     const expression = `${numFirst} ${operation} ${numSecond}`;
-    const correctAnswer = performRandomOperation(
+    const correctAnswer = performOperation(
       numFirst,
       numSecond,
       operation,

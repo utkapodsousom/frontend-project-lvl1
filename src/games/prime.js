@@ -21,8 +21,7 @@ export default () => {
   const gameData = () => {
     const givenNumber = getRandomNumber(1, 100);
     const isNumberPrime = isPrime(givenNumber);
-    const answers = ['no', 'yes'];
-    const correctAnswer = isNumberPrime ? answers[1] : answers[0];
+    const correctAnswer = isNumberPrime ? 'yes' : 'no';
 
     return [givenNumber, correctAnswer];
   };

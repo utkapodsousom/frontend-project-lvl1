@@ -7,8 +7,7 @@ export default (gameDescription, gameData) => {
   console.log(gameDescription);
 
   for (let winCount = 0; winCount < highestScore; winCount += 1) {
-    const gameDataColl = gameData();
-    const [question, correctAnswer] = gameDataColl;
+    const [question, correctAnswer] = gameData();
     const userInput = readlineSync.question(`Question: ${question}\n`);
     console.log(`Your answer: ${userInput}`);
     if (userInput !== correctAnswer) {
